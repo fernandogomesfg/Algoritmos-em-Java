@@ -1,4 +1,7 @@
-
+/**
+ * Menu das 4 operacoes basicas da Matematica
+ * Data: 13/08/2019
+ */
 package menu.de.operacoes.matematicas;
 
 import java.util.Scanner;
