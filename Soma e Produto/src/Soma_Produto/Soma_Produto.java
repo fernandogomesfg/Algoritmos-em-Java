@@ -2,7 +2,7 @@
  * Programa que recebe um numero n e vai calculando a soma e produto dos numeros digitados, se n for multiplo de 3 ele mostra so a soma, caso contrario mostra o produto
  * Data:22/12/2020
  */
-package javaapplication24;
+package Soma_Produto;
 
 import java.util.Scanner;
 
