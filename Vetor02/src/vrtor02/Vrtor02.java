@@ -1,7 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Algoritmo sobre vetor construido com base no curo de Java para iniciantes do canal Curso em Video
+ * Data:16/0/2021
  */
 package vrtor02;
 
