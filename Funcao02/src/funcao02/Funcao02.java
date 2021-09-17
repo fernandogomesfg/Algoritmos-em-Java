@@ -1,7 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Funcoes em JAVA
+ * Funcoes retornam valor
+ * Data: 17/09/2021
  */
 package funcao02;
 
@@ -11,11 +11,19 @@ package funcao02;
  */
 public class Funcao02 {
 
-    /**
-     * @param args the command line arguments
-     */
+    //Funcao de soma
+    static int Soma(int a, int b) {
+        int s = a + b;
+        return s;
+
+    }
+
     public static void main(String[] args) {
         // TODO code application logic here
+        int sm = Soma(4, 1);
+        System.out.println(sm);
+
+        //System.out.println(s);
     }
-    
+
 }
