@@ -2,7 +2,6 @@
  * Procedimentos em JAVA
  * Procedimentos nao retornam valor
  * Data: 17/09/2021
- *
  */
 package funcao;
 
