@@ -15,7 +15,13 @@ public class OrientacaoAObjectos {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Cadeira c1 = new Cadeira();
+        c1.serrar();
+        c1.lixar();
+        c1.pintar();
+        c1.setCor("Branca");
+        System.out.println("Cor actual: " + c1.getCor());
+        
     }
-    
+
 }
