@@ -31,12 +31,9 @@ public class OrientacaoAObjectos2 {
         a1.ImprimirDados();
         System.out.println("");
         a2.ImprimirDados();
-        double media = Aluno.Media(10,14);
-        System.out.println("Media: " +media);
-        
-       
-    }
+        double media = Aluno.Media(10, 14);
+        System.out.println("Media: " + media);
 
-    
+    }
 
 }
