@@ -15,7 +15,10 @@ public class ListaDeObjectos {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        int valor = 5;
+        double valor_d = 10.5;
+        boolean maior_idade = true;
+        String nome = "Fernando Gomes";
     }
-    
+
 }
