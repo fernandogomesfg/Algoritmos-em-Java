@@ -41,8 +41,6 @@ public class Vendedor extends Funcionario {
         this.Comissao = Comissao;
     }
 
-    private double Salario() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
 }
