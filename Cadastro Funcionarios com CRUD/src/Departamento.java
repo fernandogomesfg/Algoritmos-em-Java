@@ -48,6 +48,7 @@ public class Departamento {
     }
     
     public void addFunc(Funcionario F){
+        F.setDep(this);
         ListaFunc.add(F);
     }
     
