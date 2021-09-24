@@ -1,17 +1,30 @@
 
 import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
 
 /**
  * 21/09/2021
  */
-
 /**
  *
  * @author Fernando Gomes
  */
 public class Principal extends javax.swing.JFrame {
+
     ArrayList<Departamento> ListaDep;
-    
+
+    public void LoadTableDep() {
+        DefaultTableModel modelo = new DefaultTableModel(new Object[]{"Codigo", "Nome"}, 0);
+
+        for (int i = 0; i < ListaDep.size(); i++) {
+            modelo.addRow(new Object[]{ListaDep.get(i).getCodigo(), ListaDep.get(i).getNome()});
+        }
+        tbl_deps.setModel(modelo);
+
+        tbl_deps.getColumnModel().getColumn(0).setPreferredWidth(50);
+        tbl_deps.getColumnModel().getColumn(1).setPreferredWidth(200);
+
+    }
 
     /**
      * Creates new form Principal
@@ -20,10 +33,14 @@ public class Principal extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         initComponents();
         ListaDep = new ArrayList();
-        
+
         //Logo que rodar o programa, os botoes NOVO  e CANCELAR estao desabilitados
         btn_dep_salvar.setEnabled(false);
         btn_dep_cancelar.setEnabled(false);
+        
+        //Bloqueia tambem os campos de texto
+        txt_dep_codigo.setEnabled(false);
+        txt_dep_nome.setEnabled(false);
     }
 
     /**
@@ -95,6 +112,11 @@ public class Principal extends javax.swing.JFrame {
         txt_dep_nome.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         btn_dep_salvar.setText("Salvar");
+        btn_dep_salvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_dep_salvarActionPerformed(evt);
+            }
+        });
 
         btn_dep_cancelar.setText("Cancelar");
         btn_dep_cancelar.addActionListener(new java.awt.event.ActionListener() {
@@ -229,10 +251,14 @@ public class Principal extends javax.swing.JFrame {
         //Limpando os campos CODIGO e NOME abaixo
         txt_dep_codigo.setText("");
         txt_dep_nome.setText("");
-        
+
         //abilitando o botao CANCELAR
         btn_dep_salvar.setEnabled(true);
         btn_dep_cancelar.setEnabled(true);
+        
+        //abilita os campos COdigo e NOME
+        txt_dep_codigo.setEnabled(true);
+        txt_dep_nome.setEnabled(true);
     }//GEN-LAST:event_btn_dep_novoActionPerformed
 
     private void btn_dep_cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dep_cancelarActionPerformed
@@ -240,6 +266,18 @@ public class Principal extends javax.swing.JFrame {
         btn_dep_salvar.setEnabled(false);
         btn_dep_cancelar.setEnabled(false);
     }//GEN-LAST:event_btn_dep_cancelarActionPerformed
+
+    private void btn_dep_salvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dep_salvarActionPerformed
+        //Cria uma departamento
+        int cod = Integer.parseInt(txt_dep_codigo.getText());
+        Departamento D = new Departamento(cod, txt_dep_nome.getText());
+       
+        //Adiciona o departamento na lista
+        ListaDep.add(D);
+        
+        // Toda vez que for clicado o botao SALVAR deve recarregar a tabela
+        LoadTableDep();
+    }//GEN-LAST:event_btn_dep_salvarActionPerformed
 
     /**
      * @param args the command line arguments
