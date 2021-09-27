@@ -134,12 +134,12 @@ public class Principal extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        tbl_deps1 = new javax.swing.JTable();
+        tbl_func = new javax.swing.JTable();
         jPanel5 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        txt_dep_codigo1 = new javax.swing.JTextField();
+        txt_func_codigo1 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        txt_dep_nome1 = new javax.swing.JTextField();
+        txt_func_nome1 = new javax.swing.JTextField();
         btn_dep_salvar1 = new javax.swing.JButton();
         btn_dep_cancelar1 = new javax.swing.JButton();
         btn_dep_novo1 = new javax.swing.JButton();
@@ -307,7 +307,7 @@ public class Principal extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Departamento", jPanel1);
 
-        tbl_deps1.setModel(new javax.swing.table.DefaultTableModel(
+        tbl_func.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -330,15 +330,15 @@ public class Principal extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        tbl_deps1.addMouseListener(new java.awt.event.MouseAdapter() {
+        tbl_func.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                tbl_deps1MouseClicked(evt);
+                tbl_funcMouseClicked(evt);
             }
         });
-        jScrollPane3.setViewportView(tbl_deps1);
-        if (tbl_deps1.getColumnModel().getColumnCount() > 0) {
-            tbl_deps1.getColumnModel().getColumn(0).setPreferredWidth(50);
-            tbl_deps1.getColumnModel().getColumn(1).setPreferredWidth(200);
+        jScrollPane3.setViewportView(tbl_func);
+        if (tbl_func.getColumnModel().getColumnCount() > 0) {
+            tbl_func.getColumnModel().getColumn(0).setPreferredWidth(50);
+            tbl_func.getColumnModel().getColumn(1).setPreferredWidth(200);
         }
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Departamento"));
@@ -346,12 +346,12 @@ public class Principal extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel3.setText("Codigo");
 
-        txt_dep_codigo1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txt_func_codigo1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         jLabel4.setText("Nome");
 
-        txt_dep_nome1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        txt_func_nome1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
         btn_dep_salvar1.setText("Salvar");
         btn_dep_salvar1.addActionListener(new java.awt.event.ActionListener() {
@@ -377,7 +377,7 @@ public class Principal extends javax.swing.JFrame {
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(txt_dep_codigo1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txt_func_codigo1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -386,7 +386,7 @@ public class Principal extends javax.swing.JFrame {
                                 .addComponent(btn_dep_salvar1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(btn_dep_cancelar1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(txt_dep_nome1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(txt_func_nome1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(113, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
@@ -395,11 +395,11 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(txt_dep_codigo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_func_codigo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(txt_dep_nome1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_func_nome1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn_dep_salvar1)
@@ -576,9 +576,9 @@ public class Principal extends javax.swing.JFrame {
         ManipulaInterface();;
     }//GEN-LAST:event_btn_dep_excluirActionPerformed
 
-    private void tbl_deps1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbl_deps1MouseClicked
+    private void tbl_funcMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbl_funcMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_tbl_deps1MouseClicked
+    }//GEN-LAST:event_tbl_funcMouseClicked
 
     private void btn_dep_salvar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dep_salvar1ActionPerformed
         // TODO add your handling code here:
@@ -659,10 +659,10 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable tbl_deps;
-    private javax.swing.JTable tbl_deps1;
+    private javax.swing.JTable tbl_func;
     private javax.swing.JTextField txt_dep_codigo;
-    private javax.swing.JTextField txt_dep_codigo1;
     private javax.swing.JTextField txt_dep_nome;
-    private javax.swing.JTextField txt_dep_nome1;
+    private javax.swing.JTextField txt_func_codigo1;
+    private javax.swing.JTextField txt_func_nome1;
     // End of variables declaration//GEN-END:variables
 }
