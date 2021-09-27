@@ -34,13 +34,65 @@ public class Principal extends javax.swing.JFrame {
         initComponents();
         ListaDep = new ArrayList();
 
-        //Logo que rodar o programa, os botoes NOVO  e CANCELAR estao desabilitados
-        btn_dep_salvar.setEnabled(false);
-        btn_dep_cancelar.setEnabled(false);
-        
-        //Bloqueia tambem os campos de texto
-        txt_dep_codigo.setEnabled(false);
-        txt_dep_nome.setEnabled(false);
+        //Chamando a funcao manipula interface
+        ManipulaInterface("Navegar");
+
+    }
+
+    //Funcao para manipular a interface principal
+    public void ManipulaInterface(String modo) {
+        switch (modo) {
+            case "Navegar":
+                //Logo que rodar o programa, os botoes NOVO  e CANCELAR estao desabilitados
+                btn_dep_salvar.setEnabled(false);
+                btn_dep_cancelar.setEnabled(false);
+
+                //Bloqueia tambem os campos de texto
+                txt_dep_codigo.setEnabled(false);
+                txt_dep_nome.setEnabled(false);
+
+                //Bloqueia todos botoes excepto o botao NOVO
+                btn_dep_novo.setEnabled(true);
+                btn_dep_editar.setEnabled(false);
+                btn_dep_excluir.setEnabled(false);
+                break;
+
+            case "Novo":
+                //Assim que o botao NOVO for clicado
+                btn_dep_salvar.setEnabled(true);
+                btn_dep_cancelar.setEnabled(true);
+                txt_dep_codigo.setEnabled(true);
+                txt_dep_nome.setEnabled(true);
+                btn_dep_novo.setEnabled(false);
+                btn_dep_editar.setEnabled(false);
+                btn_dep_excluir.setEnabled(false);
+                break;
+
+            case "Editar":
+                //Assim que o botao EDITAR for clicado
+                btn_dep_salvar.setEnabled(true);
+                btn_dep_cancelar.setEnabled(true);
+                txt_dep_codigo.setEnabled(true);
+                txt_dep_nome.setEnabled(true);
+                btn_dep_novo.setEnabled(true);
+                btn_dep_editar.setEnabled(false);
+                btn_dep_excluir.setEnabled(false);
+                break;
+
+            case "Excluir":
+                //Assim que o botao NOVO for clicado
+                btn_dep_salvar.setEnabled(false);
+                btn_dep_cancelar.setEnabled(false);
+                txt_dep_codigo.setEnabled(false);
+                txt_dep_nome.setEnabled(true);
+                btn_dep_novo.setEnabled(false);
+                btn_dep_editar.setEnabled(false);
+                btn_dep_excluir.setEnabled(false);
+                break;
+            default:
+                System.out.println("Modo Invalido");
+
+        }
     }
 
     /**
@@ -252,31 +304,31 @@ public class Principal extends javax.swing.JFrame {
         txt_dep_codigo.setText("");
         txt_dep_nome.setText("");
 
-        //abilitando o botao CANCELAR
-        btn_dep_salvar.setEnabled(true);
-        btn_dep_cancelar.setEnabled(true);
-        
-        //abilita os campos COdigo e NOME
-        txt_dep_codigo.setEnabled(true);
-        txt_dep_nome.setEnabled(true);
+        ManipulaInterface("Novo");
     }//GEN-LAST:event_btn_dep_novoActionPerformed
 
     private void btn_dep_cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dep_cancelarActionPerformed
         //Clicando no boatao CANCELAR, ele bloqieia os botoes SALVAR e CANCELAR
-        btn_dep_salvar.setEnabled(false);
-        btn_dep_cancelar.setEnabled(false);
+        ManipulaInterface("Navegar");
+
+        txt_dep_codigo.setText("");
+        txt_dep_nome.setText("");
     }//GEN-LAST:event_btn_dep_cancelarActionPerformed
 
     private void btn_dep_salvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dep_salvarActionPerformed
         //Cria uma departamento
         int cod = Integer.parseInt(txt_dep_codigo.getText());
         Departamento D = new Departamento(cod, txt_dep_nome.getText());
-       
+
         //Adiciona o departamento na lista
         ListaDep.add(D);
-        
+
         // Toda vez que for clicado o botao SALVAR deve recarregar a tabela
         LoadTableDep();
+
+        ManipulaInterface("Navegar");
+        txt_dep_codigo.setText("");
+        txt_dep_nome.setText("");
     }//GEN-LAST:event_btn_dep_salvarActionPerformed
 
     /**
