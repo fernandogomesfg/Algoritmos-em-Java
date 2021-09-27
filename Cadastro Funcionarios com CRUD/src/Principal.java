@@ -12,6 +12,7 @@ import javax.swing.table.DefaultTableModel;
 public class Principal extends javax.swing.JFrame {
 
     ArrayList<Departamento> ListaDep;
+    String modo;
 
     public void LoadTableDep() {
         DefaultTableModel modelo = new DefaultTableModel(new Object[]{"Codigo", "Nome"}, 0);
@@ -35,12 +36,13 @@ public class Principal extends javax.swing.JFrame {
         ListaDep = new ArrayList();
 
         //Chamando a funcao manipula interface
-        ManipulaInterface("Navegar");
+        modo = "Navegar";
+        ManipulaInterface();
 
     }
 
     //Funcao para manipular a interface principal
-    public void ManipulaInterface(String modo) {
+    public void ManipulaInterface() {
         switch (modo) {
             case "Navegar":
                 //Logo que rodar o programa, os botoes NOVO  e CANCELAR estao desabilitados
@@ -88,6 +90,17 @@ public class Principal extends javax.swing.JFrame {
                 btn_dep_novo.setEnabled(false);
                 btn_dep_editar.setEnabled(false);
                 btn_dep_excluir.setEnabled(false);
+                break;
+
+            case "Seleccao":
+                //Assim que for clicado na tabela
+                btn_dep_salvar.setEnabled(false);
+                btn_dep_cancelar.setEnabled(false);
+                txt_dep_codigo.setEnabled(false);
+                txt_dep_nome.setEnabled(false);
+                btn_dep_novo.setEnabled(true);
+                btn_dep_editar.setEnabled(true);
+                btn_dep_excluir.setEnabled(true);
                 break;
             default:
                 System.out.println("Modo Invalido");
@@ -143,6 +156,11 @@ public class Principal extends javax.swing.JFrame {
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
                 return canEdit [columnIndex];
+            }
+        });
+        tbl_deps.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tbl_depsMouseClicked(evt);
             }
         });
         jScrollPane2.setViewportView(tbl_deps);
@@ -225,8 +243,18 @@ public class Principal extends javax.swing.JFrame {
         });
 
         btn_dep_editar.setText("Editar");
+        btn_dep_editar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_dep_editarActionPerformed(evt);
+            }
+        });
 
         btn_dep_excluir.setText("Excluir");
+        btn_dep_excluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_dep_excluirActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -303,33 +331,70 @@ public class Principal extends javax.swing.JFrame {
         //Limpando os campos CODIGO e NOME abaixo
         txt_dep_codigo.setText("");
         txt_dep_nome.setText("");
-
-        ManipulaInterface("Novo");
+        modo = "Novo";
+        ManipulaInterface();
     }//GEN-LAST:event_btn_dep_novoActionPerformed
 
     private void btn_dep_cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dep_cancelarActionPerformed
         //Clicando no boatao CANCELAR, ele bloqieia os botoes SALVAR e CANCELAR
-        ManipulaInterface("Navegar");
+        modo = "Navegar";
+        ManipulaInterface();
 
         txt_dep_codigo.setText("");
         txt_dep_nome.setText("");
     }//GEN-LAST:event_btn_dep_cancelarActionPerformed
 
     private void btn_dep_salvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dep_salvarActionPerformed
-        //Cria uma departamento
         int cod = Integer.parseInt(txt_dep_codigo.getText());
-        Departamento D = new Departamento(cod, txt_dep_nome.getText());
+        if (modo.equals("Novo")) {
+            //Cria uma departamento
+            Departamento D = new Departamento(cod, txt_dep_nome.getText());
 
-        //Adiciona o departamento na lista
-        ListaDep.add(D);
+            //Adiciona o departamento na lista
+            ListaDep.add(D);
+        } else if (modo.equals("Editar")) {
+            int index = tbl_deps.getSelectedRow();
+            ListaDep.get(index).setCodigo(cod);
+            ListaDep.get(index).setNome(txt_dep_nome.getText());
+        }
 
         // Toda vez que for clicado o botao SALVAR deve recarregar a tabela
         LoadTableDep();
 
-        ManipulaInterface("Navegar");
+        modo = "Navegar";
+        ManipulaInterface();
         txt_dep_codigo.setText("");
         txt_dep_nome.setText("");
     }//GEN-LAST:event_btn_dep_salvarActionPerformed
+
+    private void tbl_depsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tbl_depsMouseClicked
+        int index = tbl_deps.getSelectedRow();
+        if (index >= 0 && index < ListaDep.size()) {
+            Departamento D = ListaDep.get(index);
+            txt_dep_codigo.setText(String.valueOf(D.getCodigo()));
+            txt_dep_nome.setText(D.getNome());
+            //Metodo de SELECCAO - ele bloqueia
+            modo = "Seleccao";
+            ManipulaInterface();
+        }
+
+    }//GEN-LAST:event_tbl_depsMouseClicked
+
+    private void btn_dep_editarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dep_editarActionPerformed
+        modo = "Editar";
+        ManipulaInterface();
+    }//GEN-LAST:event_btn_dep_editarActionPerformed
+
+    private void btn_dep_excluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dep_excluirActionPerformed
+        int index = tbl_deps.getSelectedRow();
+        if (index >= 0 && index < ListaDep.size()) {
+            ListaDep.remove(index);
+
+        }
+        LoadTableDep();
+        modo = "Navegar";
+        ManipulaInterface();;
+    }//GEN-LAST:event_btn_dep_excluirActionPerformed
 
     /**
      * @param args the command line arguments
