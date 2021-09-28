@@ -140,11 +140,11 @@ public class Principal extends javax.swing.JFrame {
         txt_func_codigo1 = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         txt_func_nome1 = new javax.swing.JTextField();
-        btn_dep_salvar1 = new javax.swing.JButton();
-        btn_dep_cancelar1 = new javax.swing.JButton();
-        btn_dep_novo1 = new javax.swing.JButton();
-        btn_dep_editar1 = new javax.swing.JButton();
-        btn_dep_excluir1 = new javax.swing.JButton();
+        btn_func_salvar1 = new javax.swing.JButton();
+        btn_func_cancelar1 = new javax.swing.JButton();
+        btn_func_novo1 = new javax.swing.JButton();
+        btn_func_editar1 = new javax.swing.JButton();
+        btn_func_excluir1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -312,14 +312,14 @@ public class Principal extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Codigo", "Nome"
+                "Matricula", "Nome", "Departamento"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false
+                false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -337,14 +337,16 @@ public class Principal extends javax.swing.JFrame {
         });
         jScrollPane3.setViewportView(tbl_func);
         if (tbl_func.getColumnModel().getColumnCount() > 0) {
-            tbl_func.getColumnModel().getColumn(0).setPreferredWidth(50);
+            tbl_func.getColumnModel().getColumn(0).setResizable(false);
             tbl_func.getColumnModel().getColumn(1).setPreferredWidth(200);
+            tbl_func.getColumnModel().getColumn(2).setResizable(false);
+            tbl_func.getColumnModel().getColumn(2).setPreferredWidth(100);
         }
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), "Departamento"));
 
         jLabel3.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
-        jLabel3.setText("Codigo");
+        jLabel3.setText("Matricula");
 
         txt_func_codigo1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
@@ -353,17 +355,17 @@ public class Principal extends javax.swing.JFrame {
 
         txt_func_nome1.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
 
-        btn_dep_salvar1.setText("Salvar");
-        btn_dep_salvar1.addActionListener(new java.awt.event.ActionListener() {
+        btn_func_salvar1.setText("Salvar");
+        btn_func_salvar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_dep_salvar1ActionPerformed(evt);
+                btn_func_salvar1ActionPerformed(evt);
             }
         });
 
-        btn_dep_cancelar1.setText("Cancelar");
-        btn_dep_cancelar1.addActionListener(new java.awt.event.ActionListener() {
+        btn_func_cancelar1.setText("Cancelar");
+        btn_func_cancelar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_dep_cancelar1ActionPerformed(evt);
+                btn_func_cancelar1ActionPerformed(evt);
             }
         });
 
@@ -379,15 +381,16 @@ public class Principal extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(txt_func_codigo1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addComponent(btn_func_salvar1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btn_func_cancelar1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel5Layout.createSequentialGroup()
-                                .addComponent(btn_dep_salvar1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(btn_dep_cancelar1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(txt_func_nome1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(113, Short.MAX_VALUE))
+                        .addComponent(txt_func_nome1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(98, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -402,29 +405,29 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(txt_func_nome1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_dep_salvar1)
-                    .addComponent(btn_dep_cancelar1))
+                    .addComponent(btn_func_salvar1)
+                    .addComponent(btn_func_cancelar1))
                 .addContainerGap(34, Short.MAX_VALUE))
         );
 
-        btn_dep_novo1.setText("Novo");
-        btn_dep_novo1.addActionListener(new java.awt.event.ActionListener() {
+        btn_func_novo1.setText("Novo");
+        btn_func_novo1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_dep_novo1ActionPerformed(evt);
+                btn_func_novo1ActionPerformed(evt);
             }
         });
 
-        btn_dep_editar1.setText("Editar");
-        btn_dep_editar1.addActionListener(new java.awt.event.ActionListener() {
+        btn_func_editar1.setText("Editar");
+        btn_func_editar1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_dep_editar1ActionPerformed(evt);
+                btn_func_editar1ActionPerformed(evt);
             }
         });
 
-        btn_dep_excluir1.setText("Excluir");
-        btn_dep_excluir1.addActionListener(new java.awt.event.ActionListener() {
+        btn_func_excluir1.setText("Excluir");
+        btn_func_excluir1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btn_dep_excluir1ActionPerformed(evt);
+                btn_func_excluir1ActionPerformed(evt);
             }
         });
 
@@ -436,11 +439,11 @@ public class Principal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(btn_dep_novo1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn_func_novo1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(40, 40, 40)
-                        .addComponent(btn_dep_editar1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn_func_editar1, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btn_dep_excluir1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btn_func_excluir1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(8, 8, 8))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -456,9 +459,9 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 156, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btn_dep_novo1)
-                    .addComponent(btn_dep_editar1)
-                    .addComponent(btn_dep_excluir1))
+                    .addComponent(btn_func_novo1)
+                    .addComponent(btn_func_editar1)
+                    .addComponent(btn_func_excluir1))
                 .addGap(18, 18, 18)
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18))
@@ -580,25 +583,25 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tbl_funcMouseClicked
 
-    private void btn_dep_salvar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dep_salvar1ActionPerformed
+    private void btn_func_salvar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_func_salvar1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_dep_salvar1ActionPerformed
+    }//GEN-LAST:event_btn_func_salvar1ActionPerformed
 
-    private void btn_dep_cancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dep_cancelar1ActionPerformed
+    private void btn_func_cancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_func_cancelar1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_dep_cancelar1ActionPerformed
+    }//GEN-LAST:event_btn_func_cancelar1ActionPerformed
 
-    private void btn_dep_novo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dep_novo1ActionPerformed
+    private void btn_func_novo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_func_novo1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_dep_novo1ActionPerformed
+    }//GEN-LAST:event_btn_func_novo1ActionPerformed
 
-    private void btn_dep_editar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dep_editar1ActionPerformed
+    private void btn_func_editar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_func_editar1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_dep_editar1ActionPerformed
+    }//GEN-LAST:event_btn_func_editar1ActionPerformed
 
-    private void btn_dep_excluir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_dep_excluir1ActionPerformed
+    private void btn_func_excluir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_func_excluir1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btn_dep_excluir1ActionPerformed
+    }//GEN-LAST:event_btn_func_excluir1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -637,15 +640,15 @@ public class Principal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_dep_cancelar;
-    private javax.swing.JButton btn_dep_cancelar1;
     private javax.swing.JButton btn_dep_editar;
-    private javax.swing.JButton btn_dep_editar1;
     private javax.swing.JButton btn_dep_excluir;
-    private javax.swing.JButton btn_dep_excluir1;
     private javax.swing.JButton btn_dep_novo;
-    private javax.swing.JButton btn_dep_novo1;
     private javax.swing.JButton btn_dep_salvar;
-    private javax.swing.JButton btn_dep_salvar1;
+    private javax.swing.JButton btn_func_cancelar1;
+    private javax.swing.JButton btn_func_editar1;
+    private javax.swing.JButton btn_func_excluir1;
+    private javax.swing.JButton btn_func_novo1;
+    private javax.swing.JButton btn_func_salvar1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
