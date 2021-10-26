@@ -19,13 +19,13 @@ public class AreaDoRectangulo {
         double comprimento, largura, Area;
         Scanner teclado = new Scanner(System.in);
 
-        System.out.println("Digite o comprimento do retângulo");
+        System.out.print("Digite o comprimento do retângulo: ");
         comprimento = teclado.nextDouble();
-        System.out.println("Digite o largura do retângulo");
+        System.out.print("Digite o largura do retângulo: ");
         largura = teclado.nextDouble();
 
         Area = comprimento * largura;
-        System.out.println("A área do retângulo é de " + Area);
+        System.out.println("A área do retângulo é de: " + Area);
 
     }
 
