@@ -1,7 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Faça um programa que termine o maior e o menor valor de 10 números introduzidos.
+ * 
+ * Data: 31/10/2021
  */
 package numero5;
 
@@ -15,7 +15,7 @@ public class Numero5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
     }
     
 }
