@@ -1,5 +1,7 @@
 /**
- * Faça um programa java para calcular as duas raízes de uma equação do segundo grau, sendo dado os valores dos coeficientes a, b, c;
+ * Faça um programa java para calcular as duas raízes de uma equação do segundo grau, sendo dado os valores dos coeficientes a, b, c
+ * 
+ * Data: 31/10/2021
  */
 package numero1;
 
