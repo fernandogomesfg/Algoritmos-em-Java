@@ -5,6 +5,8 @@
  */
 package metodo.main;
 
+import conexao.ModuloConexao;
+
 /**
  *
  * @author Fernando Gomes
@@ -16,6 +18,9 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        ModuloConexao Conexao = new ModuloConexao();
+        Conexao.conectar();
+        Conexao.desconectar();
     }
     
 }
