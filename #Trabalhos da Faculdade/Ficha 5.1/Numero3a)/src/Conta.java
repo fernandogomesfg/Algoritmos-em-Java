@@ -1,7 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * Para cada alínea do exercício numero 1, crie as suas respectivas classes
+ * 
+ * Data: 13/11/2021
  */
 
 /**
@@ -9,5 +9,14 @@
  * @author Fernando Gomes
  */
 public class Conta {
+    private int número;
+    private int saldo;
+    private String satuts;
+    
+    public boolean depósito(){
+    
+    }
+    
+    levantamento
     
 }
