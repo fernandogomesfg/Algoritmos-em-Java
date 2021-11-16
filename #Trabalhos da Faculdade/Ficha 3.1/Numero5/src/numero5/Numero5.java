@@ -17,24 +17,24 @@ public class Numero5 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int num, num_maior = 0, num_menor = 0;
         Scanner teclado = new Scanner(System.in);
-        
-       
-        for (int i = 1; i <= 10; i++) {
-            System.out.print("Digite o " + i + "o numero: ");
-            num = teclado.nextInt();
 
-            if (num > num_maior) {
-                num_maior = num;
+        int[] a = {14, 4, 5, 7, 84, 6, 14, 3};
+        int num_maior = a[0];
+        int num_menor = a[0];
+        
+        for (int i = 1; i < a.length; i++) {
+            if (num_maior < a[i]) {
+                num_maior = a[i];
             }
-            if (num < num_menor) {
-                num_menor = num;
+            if (num_menor > a[i]) {
+                num_menor = a[i];
             }
+            
+            
         }
+
         System.out.println("O menor numero menor eh: " + num_menor);
         System.out.println("O menor numero maior eh: " + num_maior);
-
     }
-
 }
