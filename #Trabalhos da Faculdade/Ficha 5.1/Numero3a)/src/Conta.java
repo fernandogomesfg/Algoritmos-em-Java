@@ -14,11 +14,16 @@ public class Conta {
     private String satuts;
     
     public boolean depósito(){
-        return true;
+        
+        
+        return false;
         
     }
     
     public boolean levantamento(){
+        
+        
+        
         return true;
     } 
     
