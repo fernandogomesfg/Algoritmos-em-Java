@@ -20,7 +20,7 @@ public class Numero5 {
         int num, num_maior = 0, num_menor = 0;
         Scanner teclado = new Scanner(System.in);
         
-      
+       
         for (int i = 1; i <= 10; i++) {
             System.out.print("Digite o " + i + "o numero: ");
             num = teclado.nextInt();
