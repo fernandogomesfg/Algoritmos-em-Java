@@ -19,14 +19,16 @@ public class Numero5 {
     public static void main(String[] args) {
         int num, num_maior = 0, num_menor = 0;
         Scanner teclado = new Scanner(System.in);
-
+        
+      
         for (int i = 1; i <= 10; i++) {
             System.out.print("Digite o " + i + "o numero: ");
             num = teclado.nextInt();
 
             if (num > num_maior) {
                 num_maior = num;
-            } else if (num < num_menor) {
+            }
+            if (num < num_menor) {
                 num_menor = num;
             }
         }
