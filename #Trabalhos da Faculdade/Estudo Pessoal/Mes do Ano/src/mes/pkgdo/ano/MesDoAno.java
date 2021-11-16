@@ -57,9 +57,13 @@ public class MesDoAno {
                 break;
             case 12:
                 System.out.println("Dezembro");
+                break;
             default:
                 System.out.println("ERRO");
         }
+        
+       
+        
     }
 
 }
