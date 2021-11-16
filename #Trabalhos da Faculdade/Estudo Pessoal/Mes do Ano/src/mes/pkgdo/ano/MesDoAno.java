@@ -16,10 +16,10 @@ public class MesDoAno {
      */
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        int op;
+        //int op;
 
         System.out.println("Introduza um numero de 1-12");
-        op = teclado.nextInt();
+        int op = teclado.nextInt();
 
         switch (op) {
             case 1:
@@ -40,18 +40,18 @@ public class MesDoAno {
             case 6:
                 System.out.println("Junho");
                 break;
-            case 7: 
+            case 7:
                 System.out.println("Julho");
                 break;
-            case 8: 
+            case 8:
                 System.out.println("Agosto");
                 break;
-            case 9: 
+            case 9:
                 System.out.println("Setembro");
                 break;
             case 10:
-                  System.out.println("Outubro");
-                  break;
+                System.out.println("Outubro");
+                break;
             case 11:
                 System.out.println("Novemro");
                 break;
@@ -59,8 +59,6 @@ public class MesDoAno {
                 System.out.println("Dezembro");
             default:
                 System.out.println("ERRO");
-                        
-            
         }
     }
 
