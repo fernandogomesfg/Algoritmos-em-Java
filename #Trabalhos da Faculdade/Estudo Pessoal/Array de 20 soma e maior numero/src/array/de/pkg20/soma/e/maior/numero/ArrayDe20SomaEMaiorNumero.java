@@ -13,19 +13,20 @@ public class ArrayDe20SomaEMaiorNumero {
      */
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
-        int[] num = new int[20];
-
-        //Preenchimento do array
-        for (int i = 0; i < num.length; i++) {
-            System.out.print("Digite o " + i + 1 + "o numero: ");
+        int[] num = new int[10];
+        
+        //Preencheminto do array com SCANNER
+        for (int i = 1; i < num.length; i++) {
+            System.out.print("Digite o " + i + "o numero: ");
             num[i] = teclado.nextInt();
+
         }
 
         //impressao dos valores
-        for (int i = 0; i < num.length; i++) {
-            System.out.print("Os elementos do array sao: " + num[i] + "");
+        //for (int i = 0; i < num.length; i++) {
+          //  System.out.print("Os elementos do array sao: " + num[i] + "");
 
-        }
+        //}
     }
 
 }
