@@ -1,9 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package array.de.pkg20.soma.e.maior.numero;
+
+import java.util.Scanner;
 
 /**
  *
@@ -15,7 +12,20 @@ public class ArrayDe20SomaEMaiorNumero {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner teclado = new Scanner(System.in);
+        int[] num = new int[20];
+
+        //Preenchimento do array
+        for (int i = 0; i < num.length; i++) {
+            System.out.print("Digite o " + i + 1 + "o numero: ");
+            num[i] = teclado.nextInt();
+        }
+
+        //impressao dos valores
+        for (int i = 0; i < num.length; i++) {
+            System.out.print("Os elementos do array sao: " + num[i] + "");
+
+        }
     }
-    
+
 }
