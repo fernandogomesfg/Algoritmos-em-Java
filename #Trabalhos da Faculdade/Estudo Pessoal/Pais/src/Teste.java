@@ -14,7 +14,8 @@ public class Teste extends Pais {
                
         //Imprimindo dados do pais um
         p1.imprimir();
-        p2.imprimir();   
+        //p1.imprimir();
+        //p2.imprimir();   
 
     }
     //Cotrutor da classe teste
