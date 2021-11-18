@@ -53,7 +53,17 @@ public class SomaNoArray {
         }
         System.out.println("");
         System.out.println("A soma dos valores do array eh: " + soma);
-
+        
+        //media dos elementos do array
+        double med = 0;
+        
+        for (int i = 0; i < a.length; i++) {
+            med = soma/a.length;
+            
+        }
+        System.out.println("");
+        System.out.println("A media dos valores do array eh: " + med);
+        System.out.println("");
         //multiplicacao dos elementos do array
         int multiplicacao = 1;
         for (int i = 0; i < a.length; i++) {
@@ -62,6 +72,7 @@ public class SomaNoArray {
         }
         System.out.println("");
         System.out.println("A multiplicacao dos valores do array eh: " + multiplicacao);
+        
     }
 
 }
