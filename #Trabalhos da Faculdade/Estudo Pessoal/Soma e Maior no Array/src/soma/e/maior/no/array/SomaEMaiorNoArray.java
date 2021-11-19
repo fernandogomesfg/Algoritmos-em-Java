@@ -26,14 +26,12 @@ public class SomaEMaiorNoArray {
         for (int i = 0; i < num.length; i++) {
             System.out.print("Digite um elemento array: ");
             num[i] = teclado.nextInt();
-
         }
 
         //Soma dos elementos
         int soma = 0;
         for (int i = 0; i < num.length; i++) {
             soma = soma + num[i];
-
         }
         System.out.println("O valor da soma eh: " + soma);
 
@@ -43,7 +41,6 @@ public class SomaEMaiorNoArray {
             if (maior < num[i]) {
                 maior = num[i];
             }
-
         }
         System.out.println("O maior elemento do array eh " + maior);
     }
