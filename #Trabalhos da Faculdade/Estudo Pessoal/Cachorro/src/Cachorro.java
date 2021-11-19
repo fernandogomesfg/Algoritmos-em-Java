@@ -14,7 +14,6 @@ public class Cachorro {
     public int idade;
     
     //construtor
-
     public Cachorro(String nome, String raca, int idade) {
         this.nome = nome;
         this.raca = raca;
