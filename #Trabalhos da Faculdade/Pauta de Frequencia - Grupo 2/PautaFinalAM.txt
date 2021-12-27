@@ -1,0 +1,28 @@
+UNIVERSIDADE EDUARDO MONDLANE
+FACULDADE DE CIENCIAS
+DEPARTAMENTO DE MATEMATICA E INFORMATICA
+
+Disciplina: Análise  Matemática
+Ano lectivo: 2021
+Semestre: Segundo Semestre
+Nome do Docente: Jose Joao
+
+Pauta final de Analise Matematica
+
+Número		Nome do Estudante	Média	Classificação
+0206121		Ana Fernando  		16.15	DISPENSADO
+0150064		Ada Beatriz   		13.75	DISPENSADO
+0200175		Beatriz Adao  		13.75	DISPENSADO
+9999368		Bia da Lurde  		13.75	DISPENSADO
+0203947		Maria Magida  		6.45	EXCLUIDO
+9994656		Jorge Mendes  		12.65	ADMITIDO
+0205632		Eva de Oziel  		9.6	EXCLUIDO
+0152310		Ema de Tadeo  		12.45	ADMITIDO
+0146132		Ana de Natan  		11.55	ADMITIDO
+0218925		Jorge  Osmar  		13.8	DISPENSADO
+0147914		Rui de Borja  		11.97	ADMITIDO
+
+Quantidade  dos estudantes excluídos, admitidos e dispensados
+Admitidos: 4
+Excluidos: 2
+Dispensados: 5

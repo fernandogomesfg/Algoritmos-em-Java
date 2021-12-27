@@ -1,0 +1,23 @@
+UNIVERSIDADE EDUARDO MONDLANE
+FACULDADE DE CIENCIAS
+DEPARTAMENTO DE MATEMATICA E INFORMATICA
+
+Disciplina: Análise  Matemática
+Ano lectivo: 2021
+Semestre: Segundo Semestre
+Nome do Docente: Jose Joao
+
+Pauta de Analise Matematica
+
+Número do Estudante	Nome do Estudante	nota1	nota2	nota3
+20206121		Ana Fernando            10.50	20.00	16.75
+20150064		Ada Beatriz             18.00	11.00	13.25
+20200175		Beatriz Adao            14.00	12.00	14.25
+19999368		Bia da Lurde            12.00	20.00	12.25
+20203947		Maria Magida            09.75	00.00	07.50
+19994656		Jorge Mendes            12.00	07.00	14.75
+20205632		Eva de Oziel            09.00	03.00	12.00
+20152310		Ema de Tadeo            04.00	15.50	14.25
+20146132		Ana de Natan            14.00	13.00	10.25
+20218925		Jorge  Osmar            10.00	15.50	14.50
+20147914		Rui de Borja            13.00	13.10	11.25
