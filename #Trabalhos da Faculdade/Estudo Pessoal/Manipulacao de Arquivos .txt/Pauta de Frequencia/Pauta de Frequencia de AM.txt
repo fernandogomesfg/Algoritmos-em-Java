@@ -1,0 +1,18 @@
+UNIVERSIDADE EDUARDO MONDLANE
+FACULDADE DE CIENCIAS
+DEPARTAMENTO DE MATEMATICA E INFORMATICA
+
+Disciplina: Análise  Matemática
+Ano lectivo: 2021
+Semestre: Segundo Semestre
+Nome do Docente: Jose Joao
+
+Pauta de Analise Matematica
+
+Número do Estudante	Nome do Estudante	nota1	nota2	nota3
+20202294		Artur Junior		14.50	20.00	16.75
+20203494		Fernando Gomes		09.75	10.00	07.50
+19994694		Lino Domingos		12.00	17.00	14.75
+20205894		Maria Andre 		09.25	13.00	12.00
+20206794		Samuel Ouana		14.00	10.00	14.25
+20208994		Shelton Novela		14.00	10.00	14.25
