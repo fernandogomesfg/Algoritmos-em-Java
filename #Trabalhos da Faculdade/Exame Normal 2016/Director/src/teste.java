@@ -15,12 +15,12 @@ public class teste {
         d1.alteraSalario(500);
         System.out.println("\n");
         d1.print();
-        
+
         Director[] directores = new Director[2];
         //preenchimento
         for (int i = 0; i < directores.length; i++) {
             directores[i] = new Director(JOptionPane.showInputDialog("Nome"), JOptionPane.showInputDialog("Departamento"), Double.parseDouble(JOptionPane.showInputDialog("Salario")));
-            
         }
+
     }
 }
