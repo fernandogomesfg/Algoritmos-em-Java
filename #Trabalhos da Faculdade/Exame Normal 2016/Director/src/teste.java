@@ -9,7 +9,7 @@ public class teste {
 
     public static void main(String[] args) {
         Director d1 = new Director("Fernando Gomes", "DMI", 50000);
-        Director d2 = new Director();
+        
         d1.print();
         System.out.println("\n");
         d1.alteraSalario(500);

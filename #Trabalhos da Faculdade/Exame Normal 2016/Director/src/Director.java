@@ -16,10 +16,6 @@ public class Director {
         this.salario = salario;
     }
 
-    public Director() {
-
-    }
-
     //metodos de acesso aos atributos
     public String getNome() {
         return nome;
