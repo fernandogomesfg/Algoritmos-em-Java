@@ -35,7 +35,7 @@ public class Operario extends Colaborador {
     //metodo toString
     @Override
     public String toString() {
-        return super.toString() + ", Valor da producao = " + valor_producao + ", Comissao = " + comissao + '}';
+        return super.toString() + ", Valor da producao = " + valor_producao + ", Comissao = " + comissao;
     }
 
     //metodo para calcular salario do operario
