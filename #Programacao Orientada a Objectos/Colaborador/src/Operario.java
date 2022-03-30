@@ -38,10 +38,10 @@ public class Operario extends Colaborador {
         return super.toString() + ", Valor da producao = " + valor_producao + ", Comissao = " + comissao;
     }
 
-    //metodo para calcular salario do operario
+    //metodo para calcular salario do operario 
     @Override
     public double calcularSalario() {
-        return super.calcularSalario() + (this.comissao * this.valor_producao);
+        return this.getSalario() - (this.getImposto() * this.getSalario()) + (this.comissao * this.valor_producao);
     }
 
 }
