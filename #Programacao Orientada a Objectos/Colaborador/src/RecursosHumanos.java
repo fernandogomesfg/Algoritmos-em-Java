@@ -43,6 +43,7 @@ public class RecursosHumanos {
         }
     }
 
+    /*
     public static void addColaborador() {
         colaboradores[3] = new Colaborador("Fernando Gomes Colaborador", "Maputo", "840357939", 1, 5000, 0.1);
 
@@ -53,14 +54,18 @@ public class RecursosHumanos {
         System.out.println("O salario: " + colaboradores[3].calcularSalario() + "\n");
 
     }
-
+     */
     public static void main(String[] args) {
-        
-        addAdministrador();
-        listaAdministrador();
 
-        addOperario();
-        listaOperario();
+        int tipoColaorador = Integer.parseInt(JOptionPane.showInputDialog("MENU\n1 - Administrador\n2 - Operario"));
+        if (tipoColaorador == 1) {
+            addAdministrador();
+            listaAdministrador();
+        } else if (tipoColaorador == 2) {
+            addOperario();
+            listaOperario();
+        }
 
     }
+
 }
