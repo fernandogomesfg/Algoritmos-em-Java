@@ -29,8 +29,10 @@ public class Administrador extends Colaborador {
         return super.toString() + ", Ajuda de custos = " + ajuda_custos ;
     }
 
+    
     //metodo para calcular salario do administrador
+    @Override
     public double calcularSalario() {
-        return super.calcularSalario() + this.ajuda_custos;
+        return this.getSalario() - (this.getImposto() * this.getSalario()) + this.ajuda_custos;
     }
 }
