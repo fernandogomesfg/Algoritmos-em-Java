@@ -3,7 +3,7 @@
  *
  * @author Fernando Gomes
  */
-public class Colaborador {
+public abstract class  Colaborador {
 
     //atributos
     private String nome, endereco, telefone;
@@ -75,14 +75,11 @@ public class Colaborador {
         return "Colaborador: " + "Nome = " + nome + ", Endereco = " + endereco + ", Telefone = " + telefone + ", Codigo do sector = " + cod_sector + ", Salario = " + salario + ", Imposto = " + imposto;
     }
 
-    //metodo para calcular salario
-    public double calcularSalario() {
-        
-        return this.salario - (this.imposto * this.salario);
-        
-        //alterativa
-        //this.setSalario(this.getSalario() - (this.getSalario() * this.getImposto()));
-        //return this.getSalario();
-    }
+    //metodo abstrato (so possui cabecalho) 
+    public abstract double calcularSalario();
+    
+   
+    
+    
 
 }
