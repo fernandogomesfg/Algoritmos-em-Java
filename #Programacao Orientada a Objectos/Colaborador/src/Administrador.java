@@ -35,4 +35,6 @@ public class Administrador extends Colaborador {
     public double calcularSalario() {
         return this.getSalario() - (this.getImposto() * this.getSalario()) + this.ajuda_custos;
     }
+    
+    
 }
