@@ -116,7 +116,7 @@ public abstract class Funcionario {
     //metodo toString
     @Override
     public String toString() {
-        return "Funcionario{" + "nome=" + nome + ", num_BI=" + num_BI + ", estado_civil=" + estado_civil + ", data_nasc=" + data_nasc + ", morada=" + morada + ", nome_pai=" + nome_pai + ", nome_mae=" + nome_mae + ", data_ingresso=" + data_ingresso + ", sexo=" + sexo + ", altura=" + altura + ", salario=" + salario + '}';
+        return "Funcionario{" + "nome=" + nome + ", num_BI=" + num_BI + ", estado_civil=" + estado_civil + ", data_nasc=" + data_nasc + ", morada=" + morada + ", nome_pai=" + nome_pai + ", nome_mae=" + nome_mae + ", data_ingresso=" + data_ingresso + ", sexo=" + sexo + ", altura=" + altura + ", salario=" + salario + ' ';
     }
     
     //metodo abstrato (so possui cabecalho) 
