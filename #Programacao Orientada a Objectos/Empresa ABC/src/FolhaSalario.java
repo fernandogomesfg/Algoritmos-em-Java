@@ -38,34 +38,53 @@ public class FolhaSalario {
         for (int i = 0; i < funcionarios.length; i++) {
             if (funcionarios[i] instanceof Func_produtividade) {
                 System.out.println(funcionarios[i].toString());
-
             }
-
         }
+    }
+
+    //metodo para listar a informação de todos funcionários 
+    //registados pela ordem crescente do seu salário.
+    public static void listOrdem() {
+        //nao consegui
     }
 
     public static void main(String[] args) {
         int menu = 0, sub_menu = 0, opcao = 0;
+
         menu = Integer.parseInt(JOptionPane.showInputDialog("MENU\n1 - Rigistar Funcionarios\n2 - Calcular Saldo do Funcionario\n0 - Sair"));
+
         if (menu == 1) {
             sub_menu = Integer.parseInt(JOptionPane.showInputDialog("SUBMENU\n1 - Registar 2 Funcionários Comissionados\n2 - Registar 2 Funcionário Produtividade\n0 - Sair"));
             if (sub_menu == 1) {
                 //metodo para registar 2 funcionarios comissionados
                 for (int i = 0; i < 2; i++) {
                     JOptionPane.showMessageDialog(null, "Digite dados do " + (i + 1) + "o funcionario");
+                    //adicionando o metodo que adiciona um comissionario
                     addFuncComissionado();
+
+                    //metodo para mostar os funcionarios inseridos - para teste
+                    System.out.println("");
+                    listFuncComissionario();
                 }
 
             } else if (sub_menu == 2) {
                 //metodo para registar 2 funcionarios produtividade
                 for (int i = 0; i < 2; i++) {
                     JOptionPane.showMessageDialog(null, "Digite dados do " + (i + 1) + "o funcionario");
+                    //adicionando o metodo que adiciona um produtividade
                     addFuncprodutividade();
+
+                    //metodo para mostar os funcionarios inseridos - para teste
+                    System.out.println("");
+                    listFuncProdutividade();
+
                 }
 
             } else if (sub_menu == 0) {
                 //caixa que pergunta se quer sair do sistema
                 opcao = JOptionPane.showConfirmDialog(null, "Deseja sair?", "Sair", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+
+                //verificando a escolha do usuario e fazendo a devida manipulacao
                 if (opcao == 0) {
                     JOptionPane.showMessageDialog(null, "Obrigado por usar o nosso sistema", "Obrigado", JOptionPane.INFORMATION_MESSAGE);
                 } else {
@@ -81,6 +100,7 @@ public class FolhaSalario {
 
             } else if (sub_menu == 2) {
                 //metodo para calcular salario do funcionnario produtividade
+
             } else if (sub_menu == 0) {
                 //caixa que pergunta se quer sair do sistema
                 opcao = JOptionPane.showConfirmDialog(null, "Deseja sair?", "Sair", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
