@@ -9,18 +9,39 @@ public class FolhaSalario {
 
     //array de funcionarios
     public static Funcionario[] funcionarios = new Funcionario[3];
-    
-    
+
     //metodo para adicionar funcionario comissionado
-    public static void addFuncComissionado(){
-        funcionarios [0] = new Func_comissionado(JOptionPane.showInputDialog("Nome do funcionario comissionado"), JOptionPane.showInputDialog("Numero de BI do funcionario comissionado"), JOptionPane.showInputDialog("Estado Civil do funcionario comissionado"), JOptionPane.showInputDialog("Data de nascimento do funcionario comissionado"), JOptionPane.showInputDialog("Morada do funcionario comissionado"), JOptionPane.showInputDialog("Nome do funcionario comissionado"), JOptionPane.showInputDialog("Nome da mae do funcionario comissionado"), JOptionPane.showInputDialog("Data de ingresso do funcionario comissionado"), JOptionPane.showInputDialog("Sexo do funcionario comissionado"), Double.parseDouble(JOptionPane.showInputDialog("Altura do funcionario comissionado")), Double.parseDouble(JOptionPane.showInputDialog("Salario do funcionario comissionado")), Double.parseDouble(JOptionPane.showInputDialog("Percentagem de vendas do funcionario comissionado")), Integer.parseInt(JOptionPane.showInputDialog("Numero de vendas do funcionario comissionado")));
-        
+    public static void addFuncComissionado() {
+        funcionarios[0] = new Func_comissionado(JOptionPane.showInputDialog("Nome do funcionario comissionado"), JOptionPane.showInputDialog("Numero de BI do funcionario comissionado"), JOptionPane.showInputDialog("Estado Civil do funcionario comissionado"), JOptionPane.showInputDialog("Data de nascimento do funcionario comissionado"), JOptionPane.showInputDialog("Morada do funcionario comissionado"), JOptionPane.showInputDialog("Nome do funcionario comissionado"), JOptionPane.showInputDialog("Nome da mae do funcionario comissionado"), JOptionPane.showInputDialog("Data de ingresso do funcionario comissionado"), JOptionPane.showInputDialog("Sexo do funcionario comissionado"), Double.parseDouble(JOptionPane.showInputDialog("Altura do funcionario comissionado")), Double.parseDouble(JOptionPane.showInputDialog("Salario do funcionario comissionado")), Double.parseDouble(JOptionPane.showInputDialog("Percentagem de vendas do funcionario comissionado")), Integer.parseInt(JOptionPane.showInputDialog("Numero de vendas do funcionario comissionado")));
+
     }
-    
-    
+
+    //metodo para listar funcionarios comissionarios
+    public static void listFuncComissionario() {
+        System.out.println("Funcionarios Comissionarios");
+        for (int i = 0; i < funcionarios.length; i++) {
+            if (funcionarios[i] instanceof Func_comissionado) {
+                System.out.println(funcionarios[i].toString());
+            }
+        }
+    }
+
     //metodo para adicionar funcionario produtividade
-    public static void addFuncprodutividade(){
-        funcionario [1] = new 
+    public static void addFuncprodutividade() {
+        funcionarios[1] = new Func_produtividade(JOptionPane.showInputDialog("Nome do funcionario produtividade"), JOptionPane.showInputDialog("Numero de BI do funcionario produtividade"), JOptionPane.showInputDialog("Estado civil do funcionario produtividade"), JOptionPane.showInputDialog("Data de nascimento do funcionario produtividade"), JOptionPane.showInputDialog("Moarada do funcionario produtividade"), JOptionPane.showInputDialog("Nome do pai do funcionario produtividade"), JOptionPane.showInputDialog("Nome da mae do funcionario produtividade"), JOptionPane.showInputDialog("Data de ingresso do funcionario produtividade"), JOptionPane.showInputDialog("Sexo do funcionario produtividade"), Double.parseDouble(JOptionPane.showInputDialog("Altura do funcionario produtividade")), Double.parseDouble(JOptionPane.showInputDialog("Salario do funcionario produtividade")), Integer.parseInt(JOptionPane.showInputDialog("Salario do funcionario produtividade")), Double.parseDouble(JOptionPane.showInputDialog("Valor por unidade produzido pelo funcionario produtividade")));
+
+    }
+
+    //metodo para listar funcionarios comissionarios
+    public static void listFuncProdutividade() {
+        System.out.println("Funcionarios Produtividade");
+        for (int i = 0; i < funcionarios.length; i++) {
+            if (funcionarios[i] instanceof Func_produtividade) {
+                System.out.println(funcionarios[i].toString());
+
+            }
+
+        }
     }
 
     public static void main(String[] args) {
@@ -30,10 +51,17 @@ public class FolhaSalario {
             sub_menu = Integer.parseInt(JOptionPane.showInputDialog("SUBMENU\n1 - Registar 2 Funcionários Comissionados\n2 - Registar 2 Funcionário Produtividade\n0 - Sair"));
             if (sub_menu == 1) {
                 //metodo para registar 2 funcionarios comissionados
-                
+                for (int i = 0; i < 2; i++) {
+                    JOptionPane.showMessageDialog(null, "Digite dados do " + (i + 1) + "o funcionario");
+                    addFuncComissionado();
+                }
 
             } else if (sub_menu == 2) {
                 //metodo para registar 2 funcionarios produtividade
+                for (int i = 0; i < 2; i++) {
+                    JOptionPane.showMessageDialog(null, "Digite dados do " + (i + 1) + "o funcionario");
+                    addFuncprodutividade();
+                }
 
             } else if (sub_menu == 0) {
                 //caixa que pergunta se quer sair do sistema
@@ -66,12 +94,12 @@ public class FolhaSalario {
 
         } else if (menu == 0) {
             //caixa que pergunta se quer sair do sistema
-                opcao = JOptionPane.showConfirmDialog(null, "Deseja sair?", "Sair", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
-                if (opcao == 0) {
-                    JOptionPane.showMessageDialog(null, "Obrigado por usar o nosso sistema", "Obrigado", JOptionPane.INFORMATION_MESSAGE);
-                } else {
-                    JOptionPane.showMessageDialog(null, "########");    //nao sei como fazer para voltar
-                }
+            opcao = JOptionPane.showConfirmDialog(null, "Deseja sair?", "Sair", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+            if (opcao == 0) {
+                JOptionPane.showMessageDialog(null, "Obrigado por usar o nosso sistema", "Obrigado", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(null, "########");    //nao sei como fazer para voltar
+            }
         }
     }
 }
