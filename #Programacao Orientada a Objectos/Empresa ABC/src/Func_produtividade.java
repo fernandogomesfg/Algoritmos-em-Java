@@ -10,7 +10,7 @@ public class Func_produtividade extends Funcionario {
     private double valor_unidade_produzida;
 
     //construtor
-    public Func_produtividade(int unidade_produzida, double valor_unidade_produzida, String nome, String num_BI, String estado_civil, String data_nasc, String morada, String nome_pai, String nome_mae, String data_ingresso, String sexo, double altura, double salario) {
+    public Func_produtividade(String nome, String num_BI, String estado_civil, String data_nasc, String morada, String nome_pai, String nome_mae, String data_ingresso, String sexo, double altura, double salario, int unidade_produzida, double valor_unidade_produzida) {
         super(nome, num_BI, estado_civil, data_nasc, morada, nome_pai, nome_mae, data_ingresso, sexo, altura, salario);
         this.unidade_produzida = unidade_produzida;
         this.valor_unidade_produzida = valor_unidade_produzida;
