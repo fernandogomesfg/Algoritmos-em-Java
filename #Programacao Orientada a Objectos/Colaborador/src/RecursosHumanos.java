@@ -20,8 +20,7 @@ public class RecursosHumanos {
         System.out.println("\nAdministradores");
         for (int i = 0; i < colaboradores.length; i++) {
             if (colaboradores[i] instanceof Administrador) {
-                System.out.println(colaboradores[i].toString()
-                );
+                System.out.println(colaboradores[i].toString());
             }
         }
     }
