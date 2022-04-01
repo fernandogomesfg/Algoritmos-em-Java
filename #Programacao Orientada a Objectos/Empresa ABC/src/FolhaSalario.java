@@ -20,7 +20,7 @@ public class FolhaSalario {
     
     //metodo para adicionar funcionario produtividade
     public static void addFuncprodutividade(){
-        funcionario [1]
+        funcionario [1] = new 
     }
 
     public static void main(String[] args) {
