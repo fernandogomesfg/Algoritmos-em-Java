@@ -6,12 +6,11 @@
  */
 public abstract class Funcionario {
     //atributos
-    private String nome, num_BI,estado_civil, data_nasc, morada, nome_pai, nome_mae, data_ingresso ;
-    private char sexo;
+    private String nome, num_BI,estado_civil, data_nasc, morada, nome_pai, nome_mae, data_ingresso, sexo;
     private double altura, salario;
     
     //construtor
-    public Funcionario(String nome, String num_BI, String estado_civil, String data_nasc, String morada, String nome_pai, String nome_mae, String data_ingresso, char sexo, double altura, double salario) {
+    public Funcionario(String nome, String num_BI, String estado_civil, String data_nasc, String morada, String nome_pai, String nome_mae, String data_ingresso, String sexo, double altura, double salario) {
         this.nome = nome;
         this.num_BI = num_BI;
         this.estado_civil = estado_civil;
@@ -90,11 +89,11 @@ public abstract class Funcionario {
         this.data_ingresso = data_ingresso;
     }
 
-    public char getSexo() {
+    public String getSexo() {
         return sexo;
     }
 
-    public void setSexo(char sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
     }
 
