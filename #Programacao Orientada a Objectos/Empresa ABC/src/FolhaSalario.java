@@ -12,7 +12,7 @@ public class FolhaSalario {
 
     //metodo para adicionar funcionario comissionado
     public static void addFuncComissionado() {
-        funcionarios[0] = new Func_comissionado(JOptionPane.showInputDialog("Nome do funcionario comissionado"), JOptionPane.showInputDialog("Numero de BI do funcionario comissionado"), JOptionPane.showInputDialog("Estado Civil do funcionario comissionado"), JOptionPane.showInputDialog("Data de nascimento do funcionario comissionado"), JOptionPane.showInputDialog("Morada do funcionario comissionado"), JOptionPane.showInputDialog("Nome do funcionario comissionado"), JOptionPane.showInputDialog("Nome da mae do funcionario comissionado"), JOptionPane.showInputDialog("Data de ingresso do funcionario comissionado"), JOptionPane.showInputDialog("Sexo do funcionario comissionado"), Double.parseDouble(JOptionPane.showInputDialog("Altura do funcionario comissionado")), Double.parseDouble(JOptionPane.showInputDialog("Salario do funcionario comissionado")), Double.parseDouble(JOptionPane.showInputDialog("Percentagem de vendas do funcionario comissionado")), Integer.parseInt(JOptionPane.showInputDialog("Numero de vendas do funcionario comissionado")));
+        funcionarios[0] = new Func_comissionado(JOptionPane.showInputDialog("Nome do funcionario comissionado"), JOptionPane.showInputDialog("Numero de BI do funcionario comissionado"), JOptionPane.showInputDialog("Estado Civil do funcionario comissionado"), JOptionPane.showInputDialog("Data de nascimento do funcionario comissionado"), JOptionPane.showInputDialog("Morada do funcionario comissionado"), JOptionPane.showInputDialog("Nome do pai do funcionario comissionado"), JOptionPane.showInputDialog("Nome da mae do funcionario comissionado"), JOptionPane.showInputDialog("Data de ingresso do funcionario comissionado"), JOptionPane.showInputDialog("Sexo do funcionario comissionado"), Double.parseDouble(JOptionPane.showInputDialog("Altura do funcionario comissionado")), Double.parseDouble(JOptionPane.showInputDialog("Salario do funcionario comissionado")), Double.parseDouble(JOptionPane.showInputDialog("Percentagem de vendas do funcionario comissionado")), Integer.parseInt(JOptionPane.showInputDialog("Numero de vendas do funcionario comissionado")));
 
     }
 
@@ -41,6 +41,22 @@ public class FolhaSalario {
             }
         }
     }
+    
+    public static void printSalarioComissionado(){
+        for (int i = 0; i < funcionarios.length; i++) {
+            if (funcionarios[i] instanceof Func_comissionado) {
+                System.out.println(funcionarios[i].calcularRemuneracao());
+            }
+            
+        }
+    }
+    
+    public static  void printFuncionario(){
+        for (int i = 0; i < funcionarios.length; i++) {
+            System.out.println(funcionarios[i].toString());
+            
+        }
+    }
 
     //metodo para listar a informação de todos funcionários 
     //registados pela ordem crescente do seu salário.
@@ -51,7 +67,7 @@ public class FolhaSalario {
     public static void main(String[] args) {
         int menu = 0, sub_menu = 0, opcao = 0;
 
-        menu = Integer.parseInt(JOptionPane.showInputDialog("MENU\n1 - Rigistar Funcionarios\n2 - Calcular Saldo do Funcionario\n0 - Sair"));
+        menu = Integer.parseInt(JOptionPane.showInputDialog("MENU\n1 - Rigistar Funcionarios\n2 - Calcular Saldo do Funcionario 3- Listar Funcionarios\n0 - Sair"));
 
         if (menu == 1) {
             sub_menu = Integer.parseInt(JOptionPane.showInputDialog("SUBMENU\n1 - Registar 2 Funcionários Comissionados\n2 - Registar 2 Funcionário Produtividade\n0 - Sair"));
@@ -97,6 +113,8 @@ public class FolhaSalario {
             //metodos para calcular saldo do funcionario
             if (sub_menu == 1) {
                 //metodo para calcular salario do funcionnario comissionado
+                
+                
 
             } else if (sub_menu == 2) {
                 //metodo para calcular salario do funcionnario produtividade
