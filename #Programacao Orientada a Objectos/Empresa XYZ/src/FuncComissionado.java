@@ -36,7 +36,7 @@ public class FuncComissionado extends Funcionario {
     //toString
     @Override
     public String toString() {
-        return "FuncComissionado{" + "percentagem=" + percentagem + ", num_vendas=" + num_vendas + '}';
+        return super.toString() + " percentagem=" + percentagem + ", Numero de vendas=" + num_vendas + '}';
     }
 
     //metodo para calcular salario do comissionado
