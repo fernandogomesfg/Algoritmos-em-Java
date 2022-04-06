@@ -45,7 +45,7 @@ public abstract class Funcionario {
 
     @Override
     public String toString() {
-        return "Funcionario{" + "num_BI=" + num_BI + ", data_ingresso=" + data_ingresso + ", salario_fixo=" + salario_fixo + '}';
+        return "Funcionario: " + "Numnero de BI=" + num_BI + ", Data de Ingresso=" + data_ingresso + ", Salario fixo=" + salario_fixo + ' ';
     }
     
     
