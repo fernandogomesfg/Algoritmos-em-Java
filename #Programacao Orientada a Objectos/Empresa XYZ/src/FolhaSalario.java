@@ -1,4 +1,5 @@
 
+import java.util.Arrays;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 
@@ -65,25 +66,28 @@ public class FolhaSalario {
 
     //metodo para listar a informação de todos funcionários 
     //registados pela ordem crescente do seu salário.
-    public static void listOrdem() {
-        //nao consegui
+    public static void printSort() {
+        Arrays.sort(funcionarios);  //ordenacao do array
+        System.out.println("Ordem dos salarios");
+        for (int i = 0; i < funcionarios.length; i++) {
+            System.out.println(funcionarios[i].toString());
+            
+        }
     }
 
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
         int menu = 0, sub_menu = 0, opcao = 0;
-        
-       /*
-        System.out.println("MENU\n1 - Rigistar Funcionarios\n2 - Calcular Saldo do Funcionario 3- Listar Funcionarios\n0 - Sair\"");
-        System.out.println("\nEscolha uma opcao");
-        menu = teclado.nextInt();
+/*
+        //System.out.println("MENU\n1 - Rigistar Funcionarios\n2 - Calcular Saldo do Funcionario 3- Listar Funcionarios\n0 - Sair\"");
+        menu = Integer.parseInt(JOptionPane.showInputDialog("MENU\nEscolha uma opcao\n1 - Rigistar Funcionarios\n2 - Calcular Saldo do Funcionario 3- Listar Funcionarios\n0 - Sair"));
+
         switch (menu) {
             case 1:
-                System.out.println("SUBMENU\n1 - Registar 2 Funcionários Comissionados\n2 - Registar 2 Funcionário Produtividade\n0 - Sair");
-                sub_menu = teclado.nextInt();
+                sub_menu = Integer.parseInt(JOptionPane.showInputDialog("SUBMENU\n1 - Registar 2 Funcionários Comissionados\n2 - Registar 2 Funcionário Produtividade\n0 - Sair"));
                 switch (sub_menu) {
                     case 1:
-                        
+
                         //metodo para registar 2 funcionarios comissionados
                         for (int i = 0; i < 2; i++) {
                             //System.out.println("Digite dados do " +(i + 1) +"o funcionario");
@@ -94,27 +98,30 @@ public class FolhaSalario {
                             //metodo para mostar os funcionarios inseridos - para teste
                             System.out.println("");
                             listFuncComissionario();
+                            
                         }
-                            break;
+                        break;
+
+                    case 2:
                         
-                        case 2:
                         break;
                     default:
                 }
                 break;
-                    case 2:
-                        // code block
-                        break;
-                    case 3:
-                        break;
+            case 2:
+                // code block
+                break;
+            case 3:
+                break;
 
-                    default:
-                        System.out.println("Obrigado por usar o nosso sistema");
+            default:
+                JOptionPane.showMessageDialog(null, "Obrigado por usar o nosso sistema", "Obrigado", JOptionPane.INFORMATION_MESSAGE);
 
-                }
+        }
         */
+       
 
-            
+            /*
         
         menu = Integer.parseInt(JOptionPane.showInputDialog("MENU\n1 - Rigistar Funcionarios\n2 - Calcular Saldo do Funcionario 3- Listar Funcionarios\n0 - Sair"));
 
@@ -130,6 +137,10 @@ public class FolhaSalario {
                     //metodo para mostar os funcionarios inseridos - para teste
                     System.out.println("");
                     listFuncComissionario();
+                    
+                    
+                    //metodo para listar salario em ordem
+                   // printSort();
                 }
 
             } else if (sub_menu == 2) {
@@ -188,6 +199,9 @@ public class FolhaSalario {
                 JOptionPane.showMessageDialog(null, "########");    //nao sei como fazer para voltar
             }
         }
-             
-        }
+*/
+         addFuncComissionado();
+         addFuncComissionado();
+         printSort();
     }
+}
