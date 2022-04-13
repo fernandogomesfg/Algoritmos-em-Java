@@ -20,6 +20,7 @@ public class FolhaSalario {
 
     //metodo para listar funcionarios comissionarios
     public static void listFuncComissionario() {
+        System.out.println("Lista dos funcionarios comissionados");
         for (int i = 0; i < funcionarios.size(); i++) {
             System.out.println(funcionarios.get(i));
         }
@@ -27,6 +28,7 @@ public class FolhaSalario {
 
     //metodo para imprimir salario do funcionario comissionado
     public static void printSalarioComissionado() {
+        System.out.println("Salario dos funcionarios comissionados");
         for (int i = 0; i < funcionarios.size(); i++) {
             if (funcionarios.get(i) instanceof FuncComissionado) {
                 System.out.println("O salario do funcionario comissionado eh: " + funcionarios.get(i).getSalario_fixo());
@@ -43,6 +45,7 @@ public class FolhaSalario {
 
     //metodo para listar funcionarios comissionarios
     public static void listFuncProdutividade() {
+        System.out.println("Lista dos funcionarios produtividade");
         for (int i = 0; i < funcionarios.size(); i++) {
             System.out.println(funcionarios.get(i));
         }
@@ -50,6 +53,7 @@ public class FolhaSalario {
 
     //metodo para imprimir salario do funcionario produtividade
     public static void printSalarioProdutividade() {
+        System.out.println("Salario dos funcionarios Produtividade");
         for (int i = 0; i < funcionarios.size(); i++) {
             if (funcionarios.get(i) instanceof FuncProdutividade) {
                 System.out.println("O salario do funcionario produtividade eh: " + funcionarios.get(i).getSalario_fixo());
