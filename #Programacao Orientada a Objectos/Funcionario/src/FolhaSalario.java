@@ -107,6 +107,7 @@ public class FolhaSalario {
                             case 3:
                                 //metodo para mostar os funcionarios comissionados
                                 //por ordem crescente do salario
+                               printSort();
 
                                 break;
                             case 0:
