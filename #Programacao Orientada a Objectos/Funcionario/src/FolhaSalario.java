@@ -60,10 +60,12 @@ public class FolhaSalario {
         }
     }
      */
- /*
+ 
+    /*
      //metodo para listar a informação de todos funcionários 
     //registados pela ordem crescente do seu salário.
     public static void printSort() {
+        
         Arrays.sort(funcionarios);  //ordenacao do array
         System.out.println("Ordem dos salarios");
         for (int i = 0; i < funcionarios.length; i++) {
@@ -125,6 +127,9 @@ public class FolhaSalario {
             case 3:
                 break;
             
+            //MENU case 0 - Sair 
+            case 0:
+                break;
                 
             default:
                 JOptionPane.showMessageDialog(null, "Opcao Invalida!!!!\nObrigado por usar o nosso sistema", "Obrigado", JOptionPane.INFORMATION_MESSAGE);
