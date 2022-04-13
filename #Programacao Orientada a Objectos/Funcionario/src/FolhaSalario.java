@@ -61,7 +61,6 @@ public class FolhaSalario {
     //metodo para listar a informação de todos funcionários 
     //registados pela ordem crescente do seu salário.
     public static void printSort() {
-
         //ordenacao do array
         System.out.println("Ordem dos salarios");
         //funcionarios.sort(Funcionario f);   //duvida
