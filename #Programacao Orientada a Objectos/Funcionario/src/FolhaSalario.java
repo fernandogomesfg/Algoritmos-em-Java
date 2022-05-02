@@ -17,6 +17,8 @@ public class FolhaSalario {
         Funcionario funcComissionado = new FuncComissionado(JOptionPane.showInputDialog("Numero do BI do funcionario comissionado"), JOptionPane.showInputDialog("Data de ingresso do funcionario comissionado"), Double.parseDouble(JOptionPane.showInputDialog("Salario do funcionario comissionado")), Double.parseDouble(JOptionPane.showInputDialog("Percentagem do funcionario comissionado")), Integer.parseInt(JOptionPane.showInputDialog("Numero de vendas do funcionario comissionado")));
         funcionarios.add(funcComissionado);
     }
+    
+    
 
     //metodo para listar funcionarios comissionarios
     public static void listFuncComissionario() {
@@ -67,7 +69,7 @@ public class FolhaSalario {
     public static void printSort() {
         //ordenacao do array
         System.out.println("Ordem dos salarios");
-        //funcionarios.sort(Funcionario f);   //duvida
+        //funcionarios.sort(fu);   //duvida
         for (int i = 0; i < funcionarios.size(); i++) {
             System.out.println(funcionarios.get(i));
 
