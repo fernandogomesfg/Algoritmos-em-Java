@@ -14,6 +14,11 @@ public class FolhaSalario {
         addFuncComissionado();
         listFuncComissionario();
         
+        System.out.println(" ");
+        
+        addFuncProdutividade();
+        listFuncProdutividade();
+        
     }
     
 }
