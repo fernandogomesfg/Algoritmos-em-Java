@@ -56,7 +56,7 @@ public abstract class Funcionario implements Serializable, Comparable{
     public abstract double calcularRemuneracao();
     
     
-    //metodo para comparar dois objectos
+    //metodo para comparar dois objectos atraves do seus salarios
     public int compareTo(Object f){
         //casting para garantir que o objecto comparado seja da classe FUNCIONARIO
         Funcionario outro = (Funcionario) f;
