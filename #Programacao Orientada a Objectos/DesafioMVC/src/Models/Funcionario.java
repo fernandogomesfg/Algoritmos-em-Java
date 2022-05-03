@@ -7,7 +7,7 @@ import java.io.Serializable;
  *
  * @author Fernando Gomes
  */
-public abstract class Funcionario implements Serializable{
+public abstract class Funcionario implements Serializable, Comparable{
      //atributos
     private String num_BI, data_ingresso;
     private double salario_fixo;
@@ -48,13 +48,27 @@ public abstract class Funcionario implements Serializable{
 
     @Override
     public String toString() {
-        return "Funcionario: " + "Numnero de BI=" + num_BI + ", Data de Ingresso=" + data_ingresso + ", Salario fixo=" + salario_fixo + ' ';
+        return "Funcionario: " + "Numnero de BI = " + num_BI + ", Data de Ingresso = " + data_ingresso + ", Salario fixo = " + salario_fixo + ' ';
     }
     
     
     //metodo abstrato (so possui cabecalho) 
     public abstract double calcularRemuneracao();
     
+    
+    //metodo para comparar dois objectos
+    public int compareTo(Object f){
+        //casting para garantir que o objecto comparado seja da classe FUNCIONARIO
+        Funcionario outro = (Funcionario) f;
+        if(this.getSalario_fixo() > outro.getSalario_fixo()){
+            return 1;
+        }else if (this.getSalario_fixo() < outro.getSalario_fixo()) {
+            return -1;
+            
+        }else{
+            return 0;
+        }
+    }
     
 }
 
