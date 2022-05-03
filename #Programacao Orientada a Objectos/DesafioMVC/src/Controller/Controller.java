@@ -7,6 +7,7 @@ import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.Collections;
 import javax.swing.JOptionPane;
 
 /**
@@ -79,7 +80,7 @@ public class Controller {
                     = new ObjectInputStream(folhasalario);
             funcionarios = (ArrayList) objLeitura.readObject();
 
-            System.out.println("Funcionarios Comissionarios");
+            System.out.println("\nFuncionarios Comissionarios");
             for (int i = 0; i < funcionarios.size(); i++) {
                 if (funcionarios.get(i) instanceof FuncComissionado) {
                     System.out.println(funcionarios.get(i).toString());
@@ -139,7 +140,8 @@ public class Controller {
             objGravar.close();
             folhasalario.flush();
             folhasalario.close();
-            System.out.println("Objeto gravado com sucesso!");
+            //System.out.println("Objeto gravado com sucesso!");
+            JOptionPane.showMessageDialog(null, "Funcionario Produtividade gravado com sucesso", "Funcionario Produtividade", JOptionPane.INFORMATION_MESSAGE);
             } catch (Exception e) {
                 
             }
@@ -156,7 +158,7 @@ public class Controller {
                     = new ObjectInputStream(folhasalario);
             funcionarios = (ArrayList) objLeitura.readObject();
 
-            System.out.println("Funcionarios Comissionarios");
+            System.out.println("\nFuncionarios Comissionarios");
             for (int i = 0; i < funcionarios.size(); i++) {
                 if (funcionarios.get(i) instanceof FuncProdutividade) {
                     System.out.println(funcionarios.get(i).toString());
@@ -168,6 +170,16 @@ public class Controller {
             folhasalario.close();
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+    
+    public static void printSort() {
+        //ordenacao do array
+        System.out.println("\nOrdem dos salarios");
+        Collections.sort(funcionarios);
+        for (int i = 0; i < funcionarios.size(); i++) {
+            //funcionarios.sort(cmprtr);
+            System.out.println(funcionarios.get(i));
         }
     }
 }
