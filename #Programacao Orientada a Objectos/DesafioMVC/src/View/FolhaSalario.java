@@ -11,13 +11,13 @@ import static Controller.Controller.*;
  */
 public class FolhaSalario {
     public static void main(String[] args) {
-        addFuncComissionado();
+        //addFuncComissionado();
         listFuncComissionario();
-        
-        System.out.println(" ");
         
         addFuncProdutividade();
         listFuncProdutividade();
+        
+        printSort();
         
     }
     
