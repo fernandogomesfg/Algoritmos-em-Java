@@ -37,7 +37,7 @@ public class FuncProdutividade extends Funcionario{
     //toString
     @Override
     public String toString() {
-        return super.toString() + "Unidade produzidas=" + unidade_produzida + ", Valor por Unidade_produzida=" + valor_unidade_produzida + '}';
+        return super.toString() + "Unidade produzidas =" + unidade_produzida + ", Valor por Unidade_produzida =" + valor_unidade_produzida + '}';
     }
     
     //metodo para calcular salario do produtividade
