@@ -80,7 +80,7 @@ public class Controller {
                     = new ObjectInputStream(folhasalario);
             funcionarios = (ArrayList) objLeitura.readObject();
 
-            System.out.println("\nFuncionarios Comissionarios");
+            System.out.println("Funcionarios Comissionarios");
             for (int i = 0; i < funcionarios.size(); i++) {
                 if (funcionarios.get(i) instanceof FuncComissionado) {
                     System.out.println(funcionarios.get(i).toString());
@@ -158,7 +158,7 @@ public class Controller {
                     = new ObjectInputStream(folhasalario);
             funcionarios = (ArrayList) objLeitura.readObject();
 
-            System.out.println("\nFuncionarios Comissionarios");
+            System.out.println("\nFuncionarios Produtividade");
             for (int i = 0; i < funcionarios.size(); i++) {
                 if (funcionarios.get(i) instanceof FuncProdutividade) {
                     System.out.println(funcionarios.get(i).toString());
