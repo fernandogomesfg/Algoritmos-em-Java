@@ -1,10 +1,7 @@
 
 package View;
 
-import static Controller.Controller.*;
-//import static Controller.Controller.addFuncComissionado;
-//import static Controller.Controller.listFuncComissionario;
-
+import static Controller.Controler.*;
 /**
  *
  * @author Fernando Gomes
@@ -12,11 +9,9 @@ import static Controller.Controller.*;
 public class FolhaSalario {
     public static void main(String[] args) {
         addFuncComissionado();
-        listFuncComissionario();
-        
         addFuncProdutividade();
+        listFuncComissionario();
         listFuncProdutividade();
-        
         printSort();
         
     }
