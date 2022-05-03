@@ -12,7 +12,7 @@ import static Controller.Controller.*;
 public class FolhaSalario {
     public static void main(String[] args) {
         //addFuncComissionado();
-        listFuncComissionario();
+        //listFuncComissionario();
         
         addFuncProdutividade();
         listFuncProdutividade();
