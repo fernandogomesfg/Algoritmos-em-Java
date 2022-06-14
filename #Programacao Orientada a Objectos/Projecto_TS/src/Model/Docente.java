@@ -7,15 +7,19 @@ package Model;
 public class Docente extends Usuario {
 
     //atriutos
-    private String nome_cadeira;
+    private String nome_cadeira, status;
+   
 
     //construtor
-    public Docente(String nome_cadeira, String nome, String endereco, String num_telefone, int idade) {
-        super(nome, endereco, num_telefone, idade);
+    public Docente(String nome, String data_nasc, String endereco, String num_telefone, String usuario, String senha, String perfil, int id, String nome_cadeira, String status) {
+        super(nome, data_nasc, endereco, num_telefone, usuario, senha, perfil, id);
         this.nome_cadeira = nome_cadeira;
     }
 
-    //GET e SET
+    public Docente() {
+    }
+
+    //get e set
     public String getNome_cadeira() {
         return nome_cadeira;
     }
@@ -24,10 +28,14 @@ public class Docente extends Usuario {
         this.nome_cadeira = nome_cadeira;
     }
 
-    //toString
-    @Override
-    public String toString() {
-        return super.toString() + "Docente{" + "Nome da cadeira que lecciona=" + nome_cadeira + '}';
+    public String getStatus() {
+        return status;
     }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+    
+    
 
 }

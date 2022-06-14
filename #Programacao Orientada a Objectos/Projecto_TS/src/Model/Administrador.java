@@ -10,9 +10,12 @@ public class Administrador extends Usuario {
     private String sector;
 
     //construtor
-    public Administrador(String sector, String nome, String endereco, String num_telefone, int idade) {
-        super(nome, endereco, num_telefone, idade);
+    public Administrador(String nome, String data_nasc, String endereco, String num_telefone, String usuario, String senha, String perfil, int id, String sector) {
+        super(nome, data_nasc, endereco, num_telefone, usuario, senha, perfil, id);
         this.sector = sector;
+    }
+
+    public Administrador() {
     }
 
     //GET e SET
